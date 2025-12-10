@@ -12,11 +12,21 @@
     "type": "git",
     "url": "git+https://github.com/dearxcorex/dev_presentation.git"
   },
-  "keywords": ["slidev", "presentation", "nbtc"],
+  "keywords": [
+    "slidev",
+    "presentation",
+    "nbtc"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@slidev/cli": "^52.11.0",
-    "@slidev/theme-seriph": "^0.25.0"
+    "@slidev/theme-apple-basic": "^0.25.1",
+    "@slidev/theme-seriph": "^0.25.0",
+    "shadcn": "^3.5.2"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "vue-chartjs": "^5.3.3"
   }
 }
