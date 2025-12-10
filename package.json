@@ -1,0 +1,22 @@
+{
+  "name": "nbtc-report-2568",
+  "version": "1.0.0",
+  "description": "รายงานผลการปฏิบัติงาน ประจำปี 2568 กสทช.",
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dearxcorex/dev_presentation.git"
+  },
+  "keywords": ["slidev", "presentation", "nbtc"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@slidev/cli": "^52.11.0",
+    "@slidev/theme-seriph": "^0.25.0"
+  }
+}
