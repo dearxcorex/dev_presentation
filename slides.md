@@ -574,11 +574,11 @@ layout: default
 
 <div class="space-y-2">
   <div class="grid grid-cols-2 gap-2">
-    <img src="/sectione/งานอำนวยการ/LINE_ALBUM_งานก่อสร้างโรงจอดรถยนต์ 2568_251210_1.jpg" class="w-full h-28 object-cover rounded-lg shadow" />
-    <img src="/sectione/งานอำนวยการ/LINE_ALBUM_งานก่อสร้างโรงจอดรถยนต์ 2568_251210_2.jpg" class="w-full h-28 object-cover rounded-lg shadow" />
+    <img src="/sectione/งานอำนวยการ/LINE_ALBUM_งานก่อสร้างโรงจอดรถยนต์ 2568_251212_1.jpg" class="w-full h-28 object-cover rounded-lg shadow" />
+    <img src="/sectione/งานอำนวยการ/LINE_ALBUM_งานก่อสร้างโรงจอดรถยนต์ 2568_251212_2.jpg" class="w-full h-28 object-cover rounded-lg shadow" />
   </div>
   <div>
-    <img src="/sectione/งานอำนวยการ/LINE_ALBUM_งานก่อสร้างโรงจอดรถยนต์ 2568_251210_3.jpg" class="w-full h-28 object-cover rounded-lg shadow" />
+    <img src="/sectione/งานอำนวยการ/LINE_ALBUM_งานก่อสร้างโรงจอดรถยนต์ 2568_251212_3.jpg" class="w-full h-28 object-cover rounded-lg shadow" />
   </div>
 </div>
 
