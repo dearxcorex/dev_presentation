@@ -11,11 +11,10 @@ import {
   Legend,
   Filler
 } from 'chart.js'
+import { THAI_FONT, setupChartDefaults } from '../setup/chartSetup'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler)
-
-// Set global font family
-ChartJS.defaults.font.family = "'Noto Sans Thai', sans-serif"
+setupChartDefaults()
 
 // Real data from: รายงานประจำเดือน มค- พย 68.xlsx
 const data = {
@@ -60,7 +59,7 @@ const options = {
       position: 'top' as const,
       labels: {
         color: '#1d1d1f',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 13, weight: '500' as const },
+        font: { family: THAI_FONT, size: 13, weight: '500' as const },
         padding: 20,
         usePointStyle: true
       }
@@ -69,17 +68,17 @@ const options = {
       display: true,
       text: 'แนวโน้มการออกใบอนุญาตรายเดือน (ม.ค. - พ.ย. 2568)',
       color: '#1d1d1f',
-      font: { family: "'Noto Sans Thai', sans-serif", size: 16, weight: 'bold' as const },
+      font: { family: THAI_FONT, size: 16, weight: 'bold' as const },
       padding: { bottom: 20 }
     }
   },
   scales: {
     x: {
-      ticks: { color: '#86868b', font: { family: "'Noto Sans Thai', sans-serif", size: 11 } },
+      ticks: { color: '#86868b', font: { family: THAI_FONT, size: 11 } },
       grid: { color: 'rgba(0, 0, 0, 0.05)' }
     },
     y: {
-      ticks: { color: '#86868b', font: { family: "'Noto Sans Thai', sans-serif", size: 12 } },
+      ticks: { color: '#86868b', font: { family: THAI_FONT, size: 12 } },
       grid: { color: 'rgba(0, 0, 0, 0.08)' },
       beginAtZero: true
     }

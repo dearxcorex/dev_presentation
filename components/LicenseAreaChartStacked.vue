@@ -12,11 +12,10 @@ import {
   Legend,
   Filler
 } from 'chart.js'
+import { THAI_FONT, setupChartDefaults } from '../setup/chartSetup'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler)
-
-// Set global font family
-ChartJS.defaults.font.family = "'Noto Sans Thai', sans-serif"
+setupChartDefaults()
 
 // Create gradient fills (shadcn-style)
 const createGradient = (ctx: CanvasRenderingContext2D, color: string, opacity1: number, opacity2: number) => {
@@ -88,7 +87,7 @@ const options = {
       align: 'end' as const,
       labels: {
         color: '#64748b',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 11, weight: '500' as const },
+        font: { family: THAI_FONT, size: 11, weight: '500' as const },
         padding: 12,
         usePointStyle: true,
         pointStyle: 'circle',
@@ -109,8 +108,8 @@ const options = {
       cornerRadius: 10,
       boxPadding: 6,
       usePointStyle: true,
-      titleFont: { family: "'Noto Sans Thai', sans-serif", size: 12, weight: '600' as const },
-      bodyFont: { family: "'Noto Sans Thai', sans-serif", size: 11, weight: '500' as const },
+      titleFont: { family: THAI_FONT, size: 12, weight: '600' as const },
+      bodyFont: { family: THAI_FONT, size: 11, weight: '500' as const },
       callbacks: {
         label: function(context: any) {
           return ` ${context.dataset.label}: ${context.parsed.y} ฉบับ`
@@ -123,7 +122,7 @@ const options = {
       stacked: true,
       ticks: {
         color: '#94a3b8',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 10, weight: '500' as const },
+        font: { family: THAI_FONT, size: 10, weight: '500' as const },
         padding: 6,
       },
       grid: {
@@ -137,7 +136,7 @@ const options = {
       stacked: true,
       ticks: {
         color: '#94a3b8',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 10, weight: '500' as const },
+        font: { family: THAI_FONT, size: 10, weight: '500' as const },
         padding: 8,
         stepSize: 50,
       },

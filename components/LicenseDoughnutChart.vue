@@ -6,11 +6,10 @@ import {
   Tooltip,
   Legend
 } from 'chart.js'
+import { THAI_FONT, setupChartDefaults } from '../setup/chartSetup'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
-
-// Set global font family
-ChartJS.defaults.font.family = "'Noto Sans Thai', sans-serif"
+setupChartDefaults()
 
 // Real data from: รายงานประจำเดือน มค- พย 68.xlsx
 const data = {
@@ -45,7 +44,7 @@ const options = {
       position: 'right' as const,
       labels: {
         color: '#1d1d1f',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 12, weight: '500' as const },
+        font: { family: THAI_FONT, size: 12, weight: '500' as const },
         padding: 12,
         usePointStyle: true,
         pointStyle: 'circle'

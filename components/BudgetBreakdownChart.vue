@@ -6,11 +6,10 @@ import {
   Tooltip,
   Legend
 } from 'chart.js'
+import { THAI_FONT, setupChartDefaults } from '../setup/chartSetup'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
-
-// Set global font family
-ChartJS.defaults.font.family = "'Noto Sans Thai', sans-serif"
+setupChartDefaults()
 
 // OCR Data from Picture1.png - Budget breakdown by category
 // งบประมาณ ปี 2568 ส.ทภ.กสทช. เขต 23
@@ -58,7 +57,7 @@ const options = {
       position: 'right' as const,
       labels: {
         color: '#475569',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 10, weight: '500' as const },
+        font: { family: THAI_FONT, size: 10, weight: '500' as const },
         padding: 8,
         usePointStyle: true,
         pointStyle: 'circle',
@@ -73,8 +72,8 @@ const options = {
       borderWidth: 1,
       padding: 10,
       cornerRadius: 8,
-      titleFont: { family: "'Noto Sans Thai', sans-serif", size: 11, weight: '600' as const },
-      bodyFont: { family: "'Noto Sans Thai', sans-serif", size: 10, weight: '500' as const },
+      titleFont: { family: THAI_FONT, size: 11, weight: '600' as const },
+      bodyFont: { family: THAI_FONT, size: 10, weight: '500' as const },
       callbacks: {
         label: function(context: any) {
           const value = context.parsed

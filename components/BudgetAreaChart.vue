@@ -10,11 +10,10 @@ import {
   Tooltip,
   Legend
 } from 'chart.js'
+import { THAI_FONT, setupChartDefaults } from '../setup/chartSetup'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
-
-// Set global font family
-ChartJS.defaults.font.family = "'Noto Sans Thai', sans-serif"
+setupChartDefaults()
 
 // OCR Data from Picture1.png - งบประมาณ ปี 2568 ส.ทภ.กสทช. เขต 23
 // ข้อมูล ณ วันที่ 30 พฤศจิกายน 2568
@@ -53,7 +52,7 @@ const options = {
       align: 'end' as const,
       labels: {
         color: '#64748b',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 11, weight: '500' as const },
+        font: { family: THAI_FONT, size: 11, weight: '500' as const },
         padding: 12,
         usePointStyle: true,
         pointStyle: 'rect',
@@ -72,8 +71,8 @@ const options = {
       borderWidth: 1,
       padding: 12,
       cornerRadius: 8,
-      titleFont: { family: "'Noto Sans Thai', sans-serif", size: 12, weight: '600' as const },
-      bodyFont: { family: "'Noto Sans Thai', sans-serif", size: 11, weight: '500' as const },
+      titleFont: { family: THAI_FONT, size: 12, weight: '600' as const },
+      bodyFont: { family: THAI_FONT, size: 11, weight: '500' as const },
       callbacks: {
         label: function(context: any) {
           const value = context.parsed.y
@@ -86,7 +85,7 @@ const options = {
     x: {
       ticks: {
         color: '#64748b',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 11, weight: '500' as const },
+        font: { family: THAI_FONT, size: 11, weight: '500' as const },
       },
       grid: {
         display: false,
@@ -98,7 +97,7 @@ const options = {
     y: {
       ticks: {
         color: '#94a3b8',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 10, weight: '500' as const },
+        font: { family: THAI_FONT, size: 10, weight: '500' as const },
         callback: function(value: any) {
           return value.toLocaleString('th-TH')
         }

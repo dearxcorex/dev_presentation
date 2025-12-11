@@ -1,9 +1,9 @@
 ---
 theme: apple-basic
-title: รายงานผลการปฏิบัติงาน ประจำปี 2568 กสทช.
+title: รายงานผลการปฏิบัติงาน ประจำปี 2568 กสทช เขต 23.
 info: |
-  ## รายงานผลการปฏิบัติงาน ประจำปี 2568
-  สำนักงานคณะกรรมการกิจการกระจายเสียง กิจการโทรทัศน์ และกิจการโทรคมนาคมแห่งชาติ
+  ## รายงานผลการปฏิบัติงาน สำนักงาน กสทช. เขต 23  ประจำปี 2568
+  
 layout: intro
 highlighter: shiki
 drawings:
@@ -17,14 +17,19 @@ fonts:
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Sarabun:wght@400;500;600;700&display=swap');
 
 :root {
-  --slidev-theme-font-family: 'Noto Sans Thai', sans-serif;
+  --slidev-theme-font-family: 'Noto Sans Thai', 'Sarabun', sans-serif;
 }
 
 * {
-  font-family: 'Noto Sans Thai', sans-serif !important;
+  font-family: 'Noto Sans Thai', 'Sarabun', sans-serif !important;
+}
+
+/* Force Thai font on canvas/charts */
+canvas {
+  font-family: 'Noto Sans Thai', 'Sarabun', sans-serif !important;
 }
 </style>
 
@@ -33,13 +38,13 @@ fonts:
 
 <div class="pt-12">
   <span class="px-4 py-2 rounded-full bg-blue-100 text-blue-600 text-xl font-medium">
-    สำนักงาน กสทช.
+    สำนักงาน กสทช เขต 23
   </span>
 </div>
 
 <div class="absolute bottom-10 right-10">
   <span class="text-sm text-gray-400">
-    คณะกรรมการกิจการกระจายเสียง กิจการโทรทัศน์ และกิจการโทรคมนาคมแห่งชาติ
+    NBTC 23
   </span>
 </div>
 
@@ -82,71 +87,121 @@ layout: default
 layout: section
 ---
 
-# 📋 ตรวจสอบและกำกับดูแล
-## Inspection & Supervision
+
+# 📋 งานตรวจสอบตามแผน
+## Planned Inspections 2568
 
 ---
-layout: two-cols-header
+layout: default
+clicks: 5
 ---
 
-# ตรวจสอบและกำกับดูแล
+# งานตรวจสอบตามแผน <span class="text-lg font-normal text-gray-500">(5 หมวด)</span>
 
-::left::
+<div class="grid grid-cols-5 gap-2 mt-2">
+  <div v-click="1" class="p-2 rounded-lg bg-gradient-to-b from-blue-50 to-blue-100 border border-blue-200 hover:shadow-md transition-all">
+    <div class="text-center">
+      <span class="text-lg">📡</span>
+      <div class="text-[10px] text-gray-500">มาตรฐานการแพร่</div>
+      <div class="text-base font-bold text-blue-700">212</div>
+      <div class="text-[9px] px-1 py-0.5 bg-green-200 text-green-700 rounded mt-1">104.4%</div>
+    </div>
+  </div>
 
+  <div v-click="2" class="p-2 rounded-lg bg-gradient-to-b from-purple-50 to-purple-100 border border-purple-200 hover:shadow-md transition-all">
+    <div class="text-center">
+      <span class="text-lg">📺</span>
+      <div class="text-[10px] text-gray-500">DTV</div>
+      <div class="text-base font-bold text-purple-700">11</div>
+      <div class="text-[9px] px-1 py-0.5 bg-purple-200 text-purple-700 rounded mt-1">สถานี</div>
+    </div>
+  </div>
 
+  <div v-click="3" class="p-2 rounded-lg bg-gradient-to-b from-orange-50 to-orange-100 border border-orange-200 hover:shadow-md transition-all">
+    <div class="text-center">
+      <span class="text-lg">📶</span>
+      <div class="text-[10px] text-gray-500">EMF</div>
+      <div class="text-base font-bold text-orange-700">11</div>
+      <div class="text-[9px] px-1 py-0.5 bg-orange-200 text-orange-700 rounded mt-1">ครั้ง</div>
+    </div>
+  </div>
 
-### ภารกิจหลัก
-- ตรวจสอบการใช้คลื่นความถี่
-- กำกับดูแลมาตรฐานบริการ
-- ตรวจสอบอุปกรณ์โทรคมนาคม
-- บังคับใช้กฎหมาย
+  <div v-click="4" class="p-2 rounded-lg bg-gradient-to-b from-green-50 to-green-100 border border-green-200 hover:shadow-md transition-all">
+    <div class="text-center">
+      <span class="text-lg">🚗</span>
+      <div class="text-[10px] text-gray-500">นอกที่ตั้ง</div>
+      <div class="text-base font-bold text-green-700">20</div>
+      <div class="text-[9px] px-1 py-0.5 bg-green-200 text-green-700 rounded mt-1">ครั้ง</div>
+    </div>
+  </div>
 
+  <div v-click="5" class="p-2 rounded-lg bg-gradient-to-b from-teal-50 to-teal-100 border border-teal-200 hover:shadow-md transition-all">
+    <div class="text-center">
+      <span class="text-lg">🔍</span>
+      <div class="text-[10px] text-gray-500">ครอบครอง</div>
+      <div class="text-base font-bold text-teal-700">100%</div>
+      <div class="text-[9px] px-1 py-0.5 bg-teal-200 text-teal-700 rounded mt-1">พิสูจน์ทราบ</div>
+    </div>
+  </div>
+</div>
 
+<div class="grid grid-cols-2 gap-4 mt-3">
+  <div class="space-y-2">
+    <div v-click="1" class="p-2 rounded-lg bg-blue-50 border-l-3 border-blue-500 text-xs">
+      <div class="font-medium text-blue-700">📡 มาตรฐานการแพร่ (212 สถานี)</div>
+      <div class="text-gray-600 flex justify-between mt-1">
+        <span>นครราชสีมา <b>110</b></span>
+        <span>ชัยภูมิ <b>51</b></span>
+        <span>บุรีรัมย์ <b>51</b></span>
+      </div>
+    </div>
+    <div v-click="2" class="p-2 rounded-lg bg-purple-50 border-l-3 border-purple-500 text-xs">
+      <div class="font-medium text-purple-700">📺 สถานี DTV (11 สถานี)</div>
+      <div class="text-gray-600">ตรวจสอบสถานีโทรทัศน์ดิจิทัล</div>
+    </div>
+    <div v-click="3" class="p-2 rounded-lg bg-orange-50 border-l-3 border-orange-500 text-xs">
+      <div class="font-medium text-orange-700">📶 EMF (11 ครั้ง)</div>
+      <div class="text-gray-600">ตรวจวัดคลื่นแม่เหล็กไฟฟ้า</div>
+    </div>
+    <div v-click="4" class="p-2 rounded-lg bg-green-50 border-l-3 border-green-500 text-xs">
+      <div class="font-medium text-green-700">🚗 นอกที่ตั้ง (20 ครั้ง)</div>
+      <div class="text-gray-600">ตรวจสอบภาคสนาม</div>
+    </div>
+  </div>
 
-::right::
+  <div class="flex flex-col justify-center items-center">
+    <div class="text-center p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-green-50 border border-blue-200 w-full">
+      <div class="text-4xl font-bold text-blue-600"> ทั้งหมด 100 %</div>
+      <!-- <div class="text-sm text-gray-500">หน่วยงาน/ครั้ง</div> -->
+      <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
+        <div class="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
+---
+layout: section
+---
 
-
-### ขอบเขตการดำเนินงาน
-- กิจการโทรคมนาคม
-- กิจการกระจายเสียง
-- กิจการโทรทัศน์
-- การใช้คลื่นความถี่
-
-
+# 📡 งานตรวจสอบนอกแผน
+## Unplanned Inspections 2568
 
 ---
 layout: default
 ---
 
-# ผลการดำเนินงาน: ตรวจสอบและกำกับดูแล
+# งานตรวจสอบนอกแผน <span class="text-lg font-normal text-gray-500">(5 หมวด, 34 รายการ)</span>
 
-<div class="grid grid-cols-3 gap-6 pt-8">
+<UnplannedWorkTabs />
 
-<div class="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
-  <div class="text-5xl font-bold text-blue-600">1,250</div>
-  <div class="text-sm text-gray-600 mt-2">ครั้งที่ตรวจสอบ</div>
-</div>
+---
+layout: default
+---
 
-<div class="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 border border-green-200">
-  <div class="text-5xl font-bold text-green-600">98%</div>
-  <div class="text-sm text-gray-600 mt-2">อัตราการปฏิบัติตามกฎหมาย</div>
-</div>
+# ภาพกิจกรรมงานตรวจสอบ <span class="text-lg font-normal text-gray-500">(4 กิจกรรม)</span>
 
-<div class="text-center p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200">
-  <div class="text-5xl font-bold text-orange-600">45</div>
-  <div class="text-sm text-gray-600 mt-2">คดีดำเนินการ</div>
-</div>
-
-</div>
-
-
-
-<div class="mt-8 p-4 rounded-xl bg-blue-50 border-l-4 border-blue-500">
-  <strong class="text-blue-700">ผลสำเร็จ:</strong> <span class="text-gray-700">การกำกับดูแลครอบคลุมพื้นที่ทั่วประเทศ พร้อมระบบติดตามแบบ Real-time</span>
-</div>
-
-
+<InspectionGallery />
 
 ---
 layout: section
@@ -154,35 +209,6 @@ layout: section
 
 # 📄 งานใบอนุญาต
 ## Licensing (ม.ค. - พ.ย. 2568)
-
----
-layout: two-cols-header
----
-
-# งานใบอนุญาต
-
-::left::
-
-
-
-### ประเภทใบอนุญาต
-- ใบอนุญาตโดรน (UAV)
-- ใบอนุญาตวิทยุสมัครเล่น/ประชาชน
-- ใบอนุญาต อปท. (องค์กรปกครองส่วนท้องถิ่น)
-- ใบอนุญาตมูลนิธิ/สมาคม
-
-
-
-::right::
-
-
-
-### ผลการดำเนินงาน
-- ออกใบอนุญาตรวม **2,113** ฉบับ
-- รายได้ค่าธรรมเนียม **1,006,124** บาท
-- โดรนมีสัดส่วนสูงสุด **53.3%**
-- เฉลี่ย **192** ฉบับ/เดือน
-
 
 
 ---
@@ -231,7 +257,7 @@ layout: two-cols
 ### ไฮไลท์สำคัญ
 
 - 🚁 **โดรน** มีสัดส่วนสูงสุด 53.3%
-- 📻 **วิทยุ** อันดับ 2 ที่ 42.1%
+- 📻 **วิทยุสมัครเล่น/ประชาชน** อันดับ 2 ที่ 42.1%
 - 💰 **รายได้รวม** 1,006,124 บาท
 - 📈 **เฉลี่ย** 102 ใบ/เดือน (โดรน)
 
@@ -577,18 +603,16 @@ layout: intro
 class: text-center
 ---
 
-# ขอบคุณ
-## Thank You
+
+# Thank You
 
 <div class="pt-8">
   <span class="px-6 py-3 rounded-full bg-blue-100 text-blue-600 text-lg font-medium">
-    สำนักงาน กสทช.
+    สำนักงาน กสทช เขต 23.
   </span>
 </div>
 
-<div class="pt-12 text-sm text-gray-400">
-  คณะกรรมการกิจการกระจายเสียง กิจการโทรทัศน์ และกิจการโทรคมนาคมแห่งชาติ
-</div>
+
 
 <div class="absolute bottom-10 right-10">
   <span class="text-xs text-gray-300">รายงานผลการปฏิบัติงาน ประจำปี 2568</span>

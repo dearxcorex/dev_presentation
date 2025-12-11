@@ -9,11 +9,10 @@ import {
   Tooltip,
   Legend
 } from 'chart.js'
+import { THAI_FONT, setupChartDefaults } from '../setup/chartSetup'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
-
-// Set global font family
-ChartJS.defaults.font.family = "'Noto Sans Thai', sans-serif"
+setupChartDefaults()
 
 // Data from ผลการปฏิบัติงานงาน ผภ. ปี 2568.docx
 const data = {
@@ -56,8 +55,8 @@ const options = {
       borderWidth: 1,
       padding: 12,
       cornerRadius: 8,
-      titleFont: { family: "'Noto Sans Thai', sans-serif", size: 12, weight: '600' as const },
-      bodyFont: { family: "'Noto Sans Thai', sans-serif", size: 11, weight: '500' as const },
+      titleFont: { family: THAI_FONT, size: 12, weight: '600' as const },
+      bodyFont: { family: THAI_FONT, size: 11, weight: '500' as const },
       callbacks: {
         label: function(context: any) {
           return ` ${context.parsed.x.toLocaleString('th-TH')} เรื่อง`
@@ -69,7 +68,7 @@ const options = {
     x: {
       ticks: {
         color: '#94a3b8',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 10, weight: '500' as const },
+        font: { family: THAI_FONT, size: 10, weight: '500' as const },
       },
       grid: {
         color: 'rgba(148, 163, 184, 0.15)',
@@ -81,7 +80,7 @@ const options = {
     y: {
       ticks: {
         color: '#475569',
-        font: { family: "'Noto Sans Thai', sans-serif", size: 11, weight: '500' as const },
+        font: { family: THAI_FONT, size: 11, weight: '500' as const },
       },
       grid: {
         display: false,
