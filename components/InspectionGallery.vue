@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
+const base = import.meta.env.BASE_URL || '/'
+const withBase = (path: string) => `${base}${path}`.replace('//', '/')
+
 const activeCard = ref<string | null>(null)
 const rippleStyle = ref<Record<string, string>>({})
 const rippleId = ref<string | null>(null)
@@ -14,8 +17,8 @@ const activities = [
     date: '8 ธ.ค. 2568',
     color: 'blue',
     images: [
-      '/sectione/งานตรวจสอบ/2568-12-11 23.24.02.jpeg',
-      '/sectione/งานตรวจสอบ/photo_2568-12-11 23.25.08.jpeg'
+      withBase('sectione/งานตรวจสอบ/2568-12-11 23.24.02.jpeg'),
+      withBase('sectione/งานตรวจสอบ/photo_2568-12-11 23.25.08.jpeg')
     ],
     description: 'ตรวจรับสถานีตรวจสอบคลื่นความถี่ระยะไกล (Remote Control Radio Monitoring Station)',
     details: 'ตรวจรับงานสถานีตรวจสอบการใช้ความถี่วิทยุระบบควบคุมระยะไกล สำนักงาน กสทช. เขต 23'
@@ -28,7 +31,7 @@ const activities = [
     date: '2568',
     color: 'red',
     images: [
-      '/sectione/งานตรวจสอบ/photo_2568-12-11 23.25.41.jpeg'
+      withBase('sectione/งานตรวจสอบ/photo_2568-12-11 23.25.41.jpeg')
     ],
     description: 'ตรวจค้นจับกุมวิทยุสื่อสาร',
     details: 'ปฏิบัติการตรวจค้นและจับกุมอุปกรณ์วิทยุสื่อสารที่ผิดกฎหมาย'
@@ -41,7 +44,7 @@ const activities = [
     date: '2568',
     color: 'green',
     images: [
-      '/sectione/งานตรวจสอบ/photo_2568-12-11 23.25.56.jpeg'
+      withBase('sectione/งานตรวจสอบ/photo_2568-12-11 23.25.56.jpeg')
     ],
     description: 'ติดตั้งอุปกรณ์ทวนสัญญาณบริเวณชายแดน',
     details: 'ติดตั้งอุปกรณ์ทวนสัญญาณเพื่อขยายพื้นที่ครอบคลุมสัญญาณบริเวณชายแดน จังหวัดบุรีรัมย์'
@@ -54,7 +57,7 @@ const activities = [
     date: '7 ส.ค. 2568',
     color: 'purple',
     images: [
-      '/sectione/งานตรวจสอบ/photo_2568-12-11 23.26.27.jpeg'
+      withBase('sectione/งานตรวจสอบ/photo_2568-12-11 23.26.27.jpeg')
     ],
     description: 'บูรณาการร่วมกับ บน.1 ตรวจ UAV',
     details: 'ปฏิบัติการร่วมกับกองบิน 1 ในการตรวจสอบอากาศยานไร้คนขับ (UAV) ณ ต.ปรุใหญ่ อ.เมือง จ.นครราชสีมา'
