@@ -187,8 +187,8 @@ const hasSelection = computed(() => activeTab.value !== null)
           <span class="px-2 py-0.5 bg-red-100 text-red-700 rounded-full text-sm font-bold">3 รายการ - งานเร่งด่วน</span>
           <button @click="activeTab = null" class="ml-auto w-6 h-6 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-400 hover:text-gray-600 transition-colors flex items-center justify-center text-sm">✕</button>
         </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div class="space-y-2">
+        <div class="flex justify-center">
+          <div class="space-y-2 max-w-md">
             <div class="p-3 rounded-xl bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 urgent-card">
               <div class="flex items-center gap-2">
                 <span class="text-xl">✈️</span>
@@ -207,7 +207,6 @@ const hasSelection = computed(() => activeTab.value !== null)
                   <div class="text-2xl font-bold text-green-600">9</div>
                   <div class="text-[10px] text-gray-500">แก้ไขแล้ว</div>
                 </div>
-               
               </div>
               <div class="mt-1 text-[10px] text-red-600 font-medium urgent-badge">🔴 ความสำคัญสูงมาก</div>
             </div>
@@ -226,9 +225,6 @@ const hasSelection = computed(() => activeTab.value !== null)
                 <span class="ml-auto text-[10px] px-1.5 py-0.5 bg-orange-200 text-orange-700 rounded">🟠 สูง</span>
               </div>
             </div>
-          </div>
-          <div>
-            <AviationInterferenceChart />
           </div>
         </div>
       </div>
