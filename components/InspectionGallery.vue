@@ -14,7 +14,7 @@ const activities = [
     date: '8 ธ.ค. 2568',
     color: 'blue',
     images: [
-      'public/sectione/งานตรวจสอบ/2568-12-11 23.24.02.jpeg',
+      '/sectione/งานตรวจสอบ/2568-12-11 23.24.02.jpeg',
       '/sectione/งานตรวจสอบ/photo_2568-12-11 23.25.08.jpeg'
     ],
     description: 'ตรวจรับสถานีตรวจสอบคลื่นความถี่ระยะไกล (Remote Control Radio Monitoring Station)',
